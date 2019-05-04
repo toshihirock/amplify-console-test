@@ -3,8 +3,8 @@ backend:
   phases:
     build:
       commands:
-        - echo "hi"
         - aws --version
+        - echo 'end'
 frontend:
   phases:
     # IMPORTANT - Please verify your build commands
