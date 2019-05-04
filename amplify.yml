@@ -1,0 +1,19 @@
+version: 0.1
+backend:
+  phases:
+    build:
+      commands:
+        - echo "hi"
+        - aws --version
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands: []
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths: []
