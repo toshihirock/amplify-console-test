@@ -3,20 +3,20 @@ backend:
   phases:
     build:
       commands:
-#        - aws cloudformation deploy --template-file ./createSg.yaml --stack-name fromAmplifyConsole --region ap-northeast-1
+        - date
 frontend:
   phases:
     # IMPORTANT - Please verify your build commands
     build:
-      commands: []
+    post_build:
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
     files:
       - '**/*'
-    customHeaders:
-       - pattern: '*.json'
-         headers:
+  customHeaders:
+      - pattern: '*.json'
+        headers:
          - key: 'X-Custom'
            value: 'hoge'
   cache:
