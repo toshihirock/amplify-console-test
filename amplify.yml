@@ -17,7 +17,7 @@ frontend:
   customHeaders:
       - pattern: '**/*'
         headers:
-         - key: 'X-Custom'
-           value: 'hoge'
+         - key: 'Content-Type'
+           value: 'text/plain'
   cache:
     paths: []
