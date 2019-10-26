@@ -15,9 +15,9 @@ frontend:
     files:
       - '**/*'
   customHeaders:
-      - pattern: '**/*'
+      - pattern: '**/*.json'
         headers:
          - key: 'Content-Type'
-           value: 'text/plain'
+           value: 'text/csv'
   cache:
     paths: []
